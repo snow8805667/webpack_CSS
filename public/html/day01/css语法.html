@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       <h1> css语法</h1>
+       <p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+       <img src="//www.runoob.com/wp-content/uploads/2013/07/632877C9-2462-41D6-BD0E-F7317E4C42AC.jpg" alt=""><br>
+        <p> 选择器通常是您需要改变样式的 HTML 元素。  </p>
+        <P>每条声明由一个属性和一个值组成。</P>
+        <p>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
+        <p>CSS声明总是以分号(;)结束，声明组以大括号({})括起来:p {color:red;text-align:center;}</p>
+        <p>CSS注释：/**/</p>
+        <h4> id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。
+                HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。
+                以下的样式规则应用于元素属性 id="thisID":</h4> 
+        <p id="thisID">这是id选择器</p>
+        <h4>class 选择器用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用。
+                class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号显示：
+                在以下的例子中，所有拥有 center 类的 HTML 元素均为居中。</h4>
+            <span class="center">这是class选择器</span>
+        <h4>如何插入样式表</h4> 
+        <p>插入样式表的方法有三种:
+            外部样式表(External style sheet)
+            内部样式表(Internal style sheet)
+            内联样式(Inline style)</p>
+        <p>当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，
+            你可以通过改变一个文件来改变整个站点的外观。每个页面使用 link 标签链接到样式表。 link 标签在（文档的）头部：
+            head link rel="stylesheet" type="text/css" href="mystyle.css"head </p>  
+        <P>内联样式）Inline style > （内部样式）Internal style sheet >（外部样式）External style sheet > 浏览器默认样式</P>      
+                   
+</html>
+<style>
+
+body{
+    background-color: coral
+}
+
+h1{
+    text-align: center;
+    color:orange;
+}
+
+p{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    padding-left: 100px;
+}
+/*这是注释*/
+
+</style>
+       </p>
+</body>
+</html>
+<style>
+
+body{
+    background-color: coral
+}
+
+h1{
+    text-align: center;
+    color:orange;
+}
+h4{
+    padding-left: 100px;
+}
+p{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    padding-left: 100px;
+}
+img{
+    padding-left: 100px;
+}
+#thisID{
+    color:red;
+}
+/*这是注释*/
+.center{
+    text-align: center;
+    display: block;
+}
+</style>
