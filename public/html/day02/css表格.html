@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> css表格</h1>
+    <h2>表格边框</h2>
+    <p>指定CSS表格边框，使用border属性。
+        下面的例子指定了一个表格的Th和TD元素的黑色边框：</p>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>孙悟空</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>猪八戒</td>
+            <td>55</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<style>
+    body {
+        background-color: coral;
+        padding-left: 100px;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: orange;
+    }
+
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+
+    }
+    table{
+        border-collapse:collapse;
+    }
+
+    table,th,td{
+        border:1px solid green;
+        width:400px;
+    }
+    td
+{
+    text-align:right;
+}
+
+    /*这是注释*/
+</style>

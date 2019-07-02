@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       <h1> css盒子模型</h1>
+       <p>所有HTML元素可以看作盒子，在CSS中，"box model"这一术语是用来设计和布局时使用。<br>
+            CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。<br>
+            盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。<br>
+            下面的图片说明了盒子模型(Box Model)：</p>
+            <img src="https://www.runoob.com/images/box-model.gif" alt="CSS box-model" width="536" height="289">
+       <p>Margin(外边距) - 清除边框外的区域，外边距是透明的。<br>
+            Border(边框) - 围绕在内边距和内容外的边框。<br>
+            Padding(内边距) - 清除内容周围的区域，内边距是透明的。<br>
+            Content(内容) - 盒子的内容，显示文本和图像。</p>
+        <div>这里是盒子内的实际内容。有 25px 内间距，25px 外间距、25px 绿色边框。</div>
+        <p>最终元素的总宽度计算公式是这样的：<br>
+            总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距<br>
+            元素的总高度最终计算公式是这样的：<br>
+            总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</p> 
+            <h2>CSS Border(边框)</h2>
+         <p>CSS边框属性允许你指定一个元素边框的样式和颜色。</p>
+         <p class="one">一些文本。</p>
+         <p class="two">一些文本。</p>
+         <p class="three">一些文本。</p>
+         <p><b>注意:</b> "border-width" 属性 如果单独使用则不起作用。要先使用 "border-style" 属性来设置边框。</p>  
+         <p class="margin">这是一个指定边距大小的段落。</p>
+         <p>这个段落是蓝色文本，居中对齐。</p>
+         <div class="marked">
+         <p>这个段落不是蓝色文本。</p>
+         </div>
+         <p>所有 class="marked"元素内的 p 元素指定一个样式，但有不同的文本颜色。</p>
+         <p class="marked">带下划线的 p 段落。</p>
+         <h2>CSS Display(显示) 与 Visibility（可见性）</h2>
+         <p>隐藏元素 - display:none或visibility:hidden</p>
+         <p>隐藏一个元素可以通过把display属性设置为"none"，或把visibility属性设置为"hidden"。但是请注意，这两种方法会产生不同的结果。<br>
+            visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。</p>
+         <h1>这是一个可见标题</h1>
+         <h1 class="hidden">这是一个隐藏标题</h1>
+         <p>注意, 实例中的隐藏标题仍然占用空间。</p> 
+         <h2>CSS Display - 块和内联元素</h2>  
+         块元素是一个元素，占用了全部宽度，在前后都是换行符。<br>
+         块元素的例子：<br>
+            h1 <br>
+            p <br>
+            div <br>
+            address , blockquote , center , dir , div , dl , fieldset , form , h1 , h2 , h3 , h4 , h5 , h6 , hr , isindex , menu , noframes , noscript , ol , p , pre , table , ul , li
+            内联元素只需要必要的宽度，不强制换行。<br>
+            内联元素的例子：<br>
+            span  <br>
+             a <br>a , abbr , acronym , b , bdo , big , br , cite , code , dfn , em , font , i , img , input , kbd , label , q , s , samp , select , small , span , strike , strong , sub , sup ,textarea , tt , u , var
+             注意：变更元素的显示类型看该元素是如何显示，它是什么样的元素。例如：一个内联元素设置为display:block是不允许有它内部的嵌套块元素。
+
+</body>
+</html>
+<style>
+h1.hidden {visibility:hidden;}
+body{
+    background-color: coral;
+    padding-left:100px;
+}
+.marked
+{
+	background-color:red;
+}
+.marked p
+{
+	color:white;
+}
+p.marked{
+    text-decoration:underline;
+}
+h1,h4{
+    text-align: center;
+    color:orange;
+}
+p.one{
+    border-style: solid;
+    border-width: 5px;
+    border-color:red;
+}
+p.two{
+    border-top-style:dotted;
+    border-right-style:solid;
+    border-bottom-style:dotted;
+    border-left-style:solid;
+    border-width:medium;
+}
+
+p.three{
+    outline-color:rebeccapurple;
+    outline-style:dotted;
+    outline-width:thin;
+	border-style:solid;
+	border-width:1px;
+
+}
+
+p{
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+div{
+    margin:25px;
+    border:25px solid green;
+    padding:25px;
+    width:400px;
+}
+
+p.margin{
+    padding:25px 50px;
+    margin:100px 50px;
+}
+/*这是注释*/
+
+</style>

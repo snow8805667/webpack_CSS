@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> css列表</h1>
+    <P>
+        CSS列表属性作用如下：
+        设置不同的列表项标记为有序列表
+        设置不同的列表项标记为无序列表
+        设置列表项标记为图像.
+    </P>
+    <h2>列表</h2>
+    <p>
+        在HTML中，有两种类型的列表：<br>
+        无序列表 - 列表项标记用特殊图形（如小黑点、小方框等）<br>
+        有序列表 - 列表项的标记有数字或字母<br>
+        使用CSS，可以列出进一步的样式，并可用图像作列表项标记。
+    </p>
+    <h2>不同的列表项标记</h2>
+    <p>ul.a {list-style-type: circle;}
+        ul.b {list-style-type: square;}
+
+        ol.c {list-style-type: upper-roman;}
+        ol.d {list-style-type: lower-alpha;}</p>
+    <p>无序列表实例:</p>
+    <ul class="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <ul class="b">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <p>有序列表实例:</p>
+    <ol class="c">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+    <ol class="d">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+</body>
+
+</html>
+<style>
+    body {
+        background-color: coral;
+        padding-left: 100px;
+    }
+
+    h1 {
+        text-align: center;
+        color: orange;
+    }
+
+    h2 {
+        text-align: center;
+        color: orange;
+    }
+
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+    }
+
+
+    ul.a {
+        list-style-type: circle;
+    }
+
+    ul.b {
+        list-style-type: square;
+    }
+
+    ol.c {
+        list-style-type: upper-roman;
+    }
+
+    ol.d {
+        list-style-type: lower-alpha;
+    }
+
+    /*这是注释*/
+</style>
