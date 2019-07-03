@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> css布局- Overflow</h1>
+    <p>CSS overflow 属性用于控制内容溢出元素框时显示的方式。</p>
+    <div id="overflowTest">
+        <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+        <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+        <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+        <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+        <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+        <p>这里的文本内容是可以滚动的，滚动条方向是垂直方向。</p>
+    </div>
+    <p>CSS Overflow</p>
+    <p>CSS overflow 属性可以控制内容溢出元素框时在对应的元素区间内添加滚动条。</p>
+    <p>overflow属性有以下值：visible 默认值。内容不会被修剪，会呈现在元素框之外。<br>
+        hidden 内容会被修剪，并且其余内容是不可见的。<br>
+        scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。 <br>
+        auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。<br>
+        inherit 规定应该从父元素继承 overflow 属性的值。
+    </p>
+    <div id="overflowTest1">
+        <p>这里的文本内容会溢出元素框。</p>
+        <p>这里的文本内容会溢出元素框。</p>
+        <p>这里的文本内容会溢出元素框。</p>
+    </div>
+    <h2>css-浮动</h2><br><br><br>
+    <p>什么是 CSS Float（浮动）？</p>
+    <p>CSS 的 Float（浮动），会使元素向左或向右移动，其周围的元素也会重新排列。<br>
+        Float（浮动），往往是用于图像，但它在布局时一样非常有用。
+    </p>
+    <h2>元素怎样浮动</h2>
+    <p>
+        元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。<br>
+        一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。<br>
+        浮动元素之后的元素将围绕它。<br>
+        浮动元素之前的元素将不会受到影响。<br>
+        如果图像是右浮动，下面的文本流将环绕在它左边：
+    </p>
+    <p>
+        <img src="https://www.runoob.com/try/demo_source/logocss.gif" id="img" width="95" height="84" />
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。
+    </p>
+    <h2>彼此相邻的浮动元素</h2>
+    <p>如果你把几个浮动的元素放到一起，如果有空间的话，它们将彼此相邻。
+     在这里，我们对图片廊使用 float 属性：</p>
+    <h2>清除浮动 - 使用 clear</h2>
+    <p>元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。<br>
+        clear 属性指定元素两侧不能出现浮动元素。<br>
+        使用 clear 属性往文本中添加图片廊：</p>    
+</body>
+
+</html>
+<style>
+    body {
+        background-color: coral;
+        padding-left: 100px;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: orange;
+    }
+
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+
+    }
+
+    #overflowTest {
+        background: #4CAF50;
+        color: white;
+        padding: 15px;
+        width: 80%;
+        height: 100px;
+        overflow: scroll;
+        border: 1px solid #ccc;
+    }
+  #overflowTest1{
+      background-color: #eee;
+      width:200px;
+      height: 50px;
+      border:1px dotted balck;
+      overflow: visible;
+  }
+  #img{
+      float: right;
+  }
+    /*这是注释*/
+</style>

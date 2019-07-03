@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> css选择符</h1>
+    <p>CSS 组合选择符</p>
+    <p>
+        CSS组合选择符包括各种简单选择符的组合方式。<br>
+        在 CSS3 中包含了四种组合方式: <br>
+        后代选择器(以空格分隔) <br>
+        子元素选择器(以大于号分隔）<br>
+        相邻兄弟选择器（以加号分隔）<br>
+        普通兄弟选择器（以破折号分隔）<br>
+    </p>
+    <h2>后代选择器</h2>
+    <p>
+        后代选择器用于选取某元素的后代元素。<br>
+        以下实例选取所有 p 元素插入到 div 元素中:
+    </p>
+    <div>
+        <p>段落 1。 在 div 中。</p>
+        <p>段落 2。 在 div 中。</p>
+    </div>
+    <p>段落 3。不在 div 中。</p>
+    <p>段落 4。不在 div 中。</p>
+    <h2>相邻兄弟选择器</h2>
+    <p>
+        相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。<br>
+        如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器（Adjacent sibling selector）。<br>
+        以下实例选取了所有位于 div 元素后的第一个 p 元素:
+    </p>
+    <div>
+        <h2>My name is Donald</h2>
+        <p>I live in Duckburg.</p>
+    </div>
+
+    <p>My best friend is Mickey.</p>
+
+    <p>I will not be styled.</p>
+
+</body>
+
+</html>
+<style>
+    body {
+        background-color: coral
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: orange;
+    }
+
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+        padding-left: 100px;
+    }
+
+    div p {
+        background-color: yellow;
+
+    }
+
+    div>p {
+        background-color: red;
+
+    }
+    div+h2{
+        background-color:yellow;
+    }
+
+    /*这是注释*/
+</style>

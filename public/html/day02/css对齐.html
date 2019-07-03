@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       <h1> CSS 布局 - 水平 & 垂直对齐</h1>
+        <h2>元素居中对齐</h2>
+        <p>要水平居中对齐一个元素(如 div), 可以使用 margin: auto;。
+            设置到元素的宽度将防止它溢出到容器的边缘。<br>
+            元素通过指定宽度，并将两边的空外边距平均分配：
+        </p>
+        <div class="center">
+        <p><b>注意: </b>使用 margin:auto 无法兼容 IE8, 除非 !DOCTYPE 已经声明。</p>
+        </div>
+        <h2>文本居中对齐</h2>
+        <p>如果仅仅是为了文本在元素内居中对齐，可以使用 text-align: center;</p>
+        <div class="center1">
+        <p>文本居中对齐。</p>
+        </div>
+       <p>注意：如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出，这时候你可以使用 "clearfix(清除浮动)" 来解决该问题。<br>
+            我们可以在父元素上添加 overflow: auto; 来解决子元素溢出的问题:</p> 
+        <div class="clearfix">
+            <img class="img2" src="https://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="170" height="170">
+            菜鸟教程 - 学的不仅是技术，更是梦想！！！
+        </div>
+        <h2>垂直居中对齐 - 使用 padding</h2>
+        <p>CSS 中有很多方式可以实现垂直居中对齐。 一个简单的方式就是头部顶部使用 padding:</p>
+        <div class="verticenter">
+                <p>我是垂直居中的。</p>
+        </div>
+        <h2>垂直居中 - 使用 position 和 transform</h2>
+        <p>除了使用 padding 和 line-height 属性外,我们还可以使用 transform 属性来设置垂直居中:</p>
+        <div class="dingweicenter">
+        <p>我是水平和垂直居中的。</p>
+        </div>
+</body>
+</html>
+<style>
+    .dingweicenter{
+        height: 200px;
+        position: relative;
+        border:3px solid green;
+
+    }
+    .dingweicenter p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.verticenter{
+    padding: 70px 0;
+    border: 3px solid green;
+}
+body{
+    background-color: coral
+}
+
+h1,h2{
+    text-align: center;
+    color:orange;
+}
+
+p{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    padding-left: 100px;
+}
+.center{
+    margin:auto;
+    width:60%;
+    border:3px solid #73AD21;
+    padding:10px;
+}
+.clearfix {
+    overflow: auto;
+    border: 1px solid #4CAF50;
+    padding: 5px;
+}
+.img2 {
+    float: right;
+}
+.container {
+    position: relative;
+    width: 100%;
+}
+.center1{
+    text-align: center;
+    border: 3px solid green;
+}
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+.right1 {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+/*这是注释*/
+
+</style>
