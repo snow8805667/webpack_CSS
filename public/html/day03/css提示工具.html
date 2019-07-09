@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       <h1> css提示工具</h1>
+       <div class="tooltip">鼠标移到这里
+        <span class="tooltiptext">提示文本</span>
+       </div>
+</body>
+</html>
+<style>
+
+body{
+    background-color: coral;
+    padding-left: 100px;
+}
+
+h1{
+    text-align: center;
+    color:orange;
+}
+
+p{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+
+}
+.tooltip .tooltiptext{
+    position: absolute;
+    visibility: hidden;
+    background-color: black;
+    color:#fff;
+    text-align: center;
+    z-index: 1;
+    width: 120px;
+    border-radius: 6px;
+    padding: 5px 0;
+    bottom: 100%;
+    left:50%;
+    margin-left: -60px;
+    /* 淡入 - 1秒内从 0% 到 100% 显示: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*这是注释*/
+
+</style>
