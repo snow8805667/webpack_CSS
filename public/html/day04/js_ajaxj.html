@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Access-Control-Allow-Orgin" content="*">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> js 向.4服务器发送接口</h1>
+    <form action="" name="form1">
+        接口名：<input name="interface" value="" /><br>
+        请求参数：<input name="param1" value="" /><br>
+        <input name="param2" value="" /><br>
+        <input name="param3" value="" /><br>
+        <input name="param4" value="" /><br>
+        <input name="param5" value="" /><br>
+        <input name="param6" value="" /><br>
+        <input name="param7" value="" /><br>
+        <input name="param8" value="" /><br>
+        <input name="param9" value="" /><br>
+        <button type="button" value="提交" onclick="sendMessage();">提交</button><br/>
+        <a href="jqslowdownup.html">jquery实现文字左右展开收缩效果</a>
+    </form>
+</body>
+
+</html>
+<script type="text/javascript" src="../../javascripts/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    function sendMessage(){
+        var xmlHttp =new XMLHttpRequest();
+        xmlHttp.open("GET","http://18.40.30.59:7001/pweb/ClientLoginNameQry.do?CertDN=051@麦迪@0210402198907070809@1",true);
+         xmlHttp.responseType="JSON";
+        xmlHttp.send();
+        xmlHttp.onreadystatechange = function(data){
+            debugger;
+            if(xmlHttp.readyState ===4&& xmlHttp.status==200){
+                alert(xmlHttp.responseText);
+            }
+        }
+    }
+
+    // function sendMessage() {
+    //     var arry = "http://18.40.30.59:7001/pweb/ClientLoginNameQry.do?CertDN=051@麦迪@0210402198907070809@1";
+    //     $.ajax({
+    //         url: 'http://18.40.30.59:7001/pweb/ClientLoginNameQry.do',
+    //         type: "GET",
+    //         data: {"CertDN":"051@麦迪@0210402198907070809@1"},
+    //         contentType: 'application/json;charset=utf-8',
+    //         dataType: 'json',
+    //         async: false,
+    //         success: function (message) {
+    //             alert(message);
+    //         }
+    //     })
+    // }
+
+</script>
+
+<style>
+    body {
+        background-color: coral;
+        padding-left: 100px;
+    }
+
+    h1 {
+        text-align: center;
+        color: orange;
+    }
+
+    h2 {
+        text-align: center;
+        color: orange;
+    }
+
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+    }
+
+
+    ul.a {
+        list-style-type: circle;
+    }
+
+    ul.b {
+        list-style-type: square;
+    }
+
+    ol.c {
+        list-style-type: upper-roman;
+    }
+
+    ol.d {
+        list-style-type: lower-alpha;
+    }
+
+    /*这是注释*/
+</style>

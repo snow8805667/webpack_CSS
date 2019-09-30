@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery实现文字左右展开收缩效果</title>
+    <script type="text/javascript" src="../../javascripts/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var boxwidth=$(".box").width();
+            $(".slide-left").click(function() {
+                $(".box").animate({
+                    width:0
+                });
+            });
+
+        $(".slide-right").click(function() {
+            $(".box").animate({
+                width:boxwidth
+            })
+        })
+
+        })
+    </script>
+</head>
+<body>
+        <button type="button" class="slide-left">关闭</button>
+        <button type="button" class="slide-right">展开</button><hr>
+        <div class="box">
+            <div class="box-inner">
+                ahfaiodfa f法计算得分士大夫阿道夫骄傲非按时的佛教啊手动阀手动阀 啊手动阀打发啊阿道夫阿三
+                阿发地方阿道夫阿斯蒂芬阿斯蒂芬啊的房间阿道夫阿道夫阿斯蒂芬asdfasdf adf af a阿道夫安抚啊发
+                案发当时艾弗森的发放大发发多发点发啊发送法撒旦发到付阿斯蒂芬阿道夫啊
+
+            </div>
+
+
+        </div>
+
+        <div class="father">
+            <div class="child_1">子元素1</div>
+            <div class="child2">子元素2</div>
+        </div>
+</body>
+</html>
+
+
+<style type="text/css">
+    .box{
+
+        float: left;
+        overflow: hidden;
+        background-color: #f0e68c
+    }
+    .box-inner{
+        width: 400px;
+        padding: 10px;
+        border: 1px solid #a29415;
+
+    }
+    .father{
+        overflow: hidden;
+        margin: 0 atuo;
+        width: 500px;
+        height: auto;
+        background-color: peachpuff;
+    }
+
+    .child_1{
+        float: left;
+        width: 248px;
+        height: 250px;
+        border: 1px solid red;
+    }
+
+    .child2{
+        float: left;
+        width: 248px;
+        height: 250px;
+        border:1px solid red;
+
+    }
+
+</style>
