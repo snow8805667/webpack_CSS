@@ -7,6 +7,17 @@
     <title>jquery实现文字左右展开收缩效果</title>
     <script type="text/javascript" src="../../javascripts/jquery.min.js"></script>
     <script type="text/javascript">
+     var i=100;
+     function doadd(num1,num2){
+        function add(){
+
+            alert( num1 +num2 + i);
+        }
+     add();
+     }
+     doadd(100,101);
+
+
         $(function(){
             var boxwidth=$(".box").width();
             $(".slide-left").click(function() {
